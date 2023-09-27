@@ -11,7 +11,7 @@ on:
 
 jobs:
   hello:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: first_job
@@ -19,7 +19,7 @@ jobs:
         shell: bash
 
   byebye:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: last_job
         run: echo "last job run successfully"
