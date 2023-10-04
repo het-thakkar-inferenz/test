@@ -25,10 +25,8 @@ jobs:
       - name: "comment from API"
         run: |
           gh api -X POST \
-            http://api.github.com/repo/${USER}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments
-            f body='
-            Comment from the api
-            '
+          repos/${USER}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
+          -f body='Comment from the api'
             
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
