@@ -3,10 +3,11 @@ name: Create a comment on new issues
 on: 
   issues:
     types: [opened]
+    
+permissions: read-all|write-all
 
 jobs:
   comment-with-action:
-    permissions: read-all|write-all
     runs-on: ubuntu-latest
     steps:
       - name: "dump github context"
