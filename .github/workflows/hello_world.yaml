@@ -1,0 +1,26 @@
+name: Hello world howdy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: first_job
+        run: echo "first job run successfully"
+        shell: bash
+
+  byebye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: last_job
+        run: echo "last job run successfully"
+        shell: bash
